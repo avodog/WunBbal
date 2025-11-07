@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>랜덤 숫자 뽑기 게임</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #2e8b57;
+    }
+
+    #drawButton {
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #drawButton:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>랜덤 숫자 뽑기 게임</h1>
+  <p>1부터 1000까지의 숫자 중 하나를 뽑아보세요!</p>
+
+  <div id="result">결과: ?</div>
+
+  <button id="drawButton" onclick="drawRandomNumber()">뽑기!</button>
+
+  <script>
+    // 랜덤 숫자를 뽑는 함수
+    function drawRandomNumber() {
+      // 1부터 1000까지의 랜덤 숫자 생성
+      const randomNumber = Math.floor(Math.random() * 1000) + 1;
+
+      // 결과를 화면에 출력
+      document.getElementById('result').textContent = '결과: ' + randomNumber;
+    }
+  </script>
+</body>
+</html>
